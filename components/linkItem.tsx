@@ -1,6 +1,12 @@
 import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-const LinkItem = ({ href, target, path, children, ...props }: any) => {
+
+type Props = {
+  href: string;
+  target?: string;
+  path: string;
+} & React.ComponentPropsWithoutRef<"a">;
+const LinkItem = ({ href, target, path, children, ...props }: Props) => {
   const active = href === path;
   return (
     <NextLink href={href} passHref>

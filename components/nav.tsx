@@ -3,7 +3,11 @@ import ButtonToggleTheme from "./buttonToggleTheme";
 import LinkItem from "./linkItem";
 import Logo from "./logo";
 
-const Nav = ({ path }: any) => {
+type Props = {
+  path: string;
+};
+
+const Nav = ({ path }: Props) => {
   return (
     <Box
       as="nav"
