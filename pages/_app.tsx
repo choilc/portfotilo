@@ -4,6 +4,7 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 import theme from "../libs/theme";
 import Head from "next/head";
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <ChakraProvider theme={theme}>
         <Nav path={router.asPath} />
         <Component {...pageProps} />
+        <Footer />
       </ChakraProvider>
     </Box>
   );

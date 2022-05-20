@@ -1,4 +1,4 @@
-import { Box, Container, HStack, Stack } from "@chakra-ui/react";
+import { Box, Container, HStack, useColorModeValue } from "@chakra-ui/react";
 import ButtonToggleTheme from "./buttonToggleTheme";
 import LinkItem from "./linkItem";
 import Logo from "./logo";
@@ -13,8 +13,14 @@ const Nav = ({ path }: any) => {
       top="0"
       left="0"
       borderBottom="1px solid #ccc"
+      bg={useColorModeValue("purple.400", "blackAlpha.900")}
     >
-      <Container width="container.md" p={0} display="flex">
+      <Container
+        width="container.md"
+        p={0}
+        display="grid"
+        gridTemplateColumns="200px auto 40px"
+      >
         <Logo />
         <HStack>
           <LinkItem path={path} href="/works">
@@ -23,7 +29,11 @@ const Nav = ({ path }: any) => {
           <LinkItem path={path} href="/posts">
             Posts
           </LinkItem>
-          <LinkItem path={path} href="github.com" target="_blank">
+          <LinkItem
+            path={path}
+            href="https://github.com/choilc/portfotilo"
+            target="_blank"
+          >
             Resource
           </LinkItem>
         </HStack>
