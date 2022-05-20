@@ -1,4 +1,5 @@
 import { Box, Container, HStack, Stack } from "@chakra-ui/react";
+import ButtonToggleTheme from "./buttonToggleTheme";
 import LinkItem from "./linkItem";
 import Logo from "./logo";
 
@@ -26,6 +27,7 @@ const Nav = ({ path }: any) => {
             Resource
           </LinkItem>
         </HStack>
+        <ButtonToggleTheme />
       </Container>
     </Box>
   );
